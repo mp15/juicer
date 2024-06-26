@@ -40,8 +40,8 @@
 # supported.
 #
 # Usage: diploid.sh -g genomeID -s stem_or_vcf [-h]
-# Juicer version 1.5
-juicer_version="1.5" 
+# Juicer version 1.6
+juicer_version="1.6"
 # cluster specific settings
 usePath=/broad/software/scripts/useuse
 load_java="use Java-1.7"
@@ -76,7 +76,7 @@ then
     printHelpAndExit 1
 fi
 
-if [ "$genomeID" == "mm10" ] || [ "$genomeID" == "mm9" ]
+if [ "$genomeID" == "mm10" ] || [ "$genomeID" == "mm9" ]|| [ "$genomeID" == "grch38" ]
 then
     chromosomes=(chr1 chr10 chr11 chr12 chr13 chr14 chr15 chr16 chr17 chr18 chr19 chr2 chr3 chr4 chr5 chr6 chr7 chr8 chr9 chrX chrY)
 elif [ "$genomeID" == "hg19" ] || [ "$genomeID" == "hg38" ]
